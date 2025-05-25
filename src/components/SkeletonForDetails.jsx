@@ -5,7 +5,7 @@ export default function SkeletonForDetails() {
     <div className="max-w-4xl mx-auto mt-20 p-6 space-y-10 relative overflow-hidden">
 
       {/* وميض يغطي الكل */}
-      <span className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-transparent via-white/60 to-transparent animate-shine pointer-events-none"></span>
+      <span className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-transparent via-white/60 to-transparent  animate-shine  pointer-events-none"></span>
 
       {/* --- دف المنتج --- */}
       <div className="flex flex-col md:flex-row items-center md:items-start space-x-0 md:space-x-8 space-y-6 md:space-y-0">

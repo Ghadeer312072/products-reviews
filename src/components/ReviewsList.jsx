@@ -38,9 +38,7 @@ function ReviewsList({ setIsAdd, setOpenWindow, setIsEdit, setUserId }) {
               >
                 Edit
               </button>
-              <RemoveButton
-
-                id={item.reviewId} />
+              <RemoveButton id={item.reviewId} />
             </div>
           )}
         </div>

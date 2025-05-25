@@ -5,7 +5,6 @@ import Header from '../src/components/Header'
 import Stars from '../src/components/Stars'
 import ReviewForm from '../src/components/ReviewForm'
 import ReviewsList from '../src/components/ReviewsList'
-import ReviewProvider from '../src/components/ReviewProvider'
 import Product from '../src/components/Product'
 import SkeletonForDetails from '../src/components/SkeletonForDetails'
 import { useNavigate } from 'react-router-dom'
@@ -35,6 +34,8 @@ export default function ProductDetails() {
   const goBack = useCallback(() => {
     navigate(-1)
   }, [])
+
+
 
   return (
     <>

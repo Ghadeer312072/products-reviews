@@ -39,7 +39,7 @@ export default function ContaxtProducts({ children }) {
   }
 
 
-  console.log("المخزن")
+
   useEffect(() => {
     fetchData()
   }, [])

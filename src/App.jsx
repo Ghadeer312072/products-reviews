@@ -13,8 +13,8 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
 
+      <Routes>
         <Route path='/' element={<ContaxtProducts><Products /></ContaxtProducts>} />
         <Route path="details/:id" element={
           <ContaxtProducts>

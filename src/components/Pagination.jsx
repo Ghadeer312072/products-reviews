@@ -13,7 +13,7 @@ function Pagination({ setCurrentPage, sizeOfList, lengthOfData }) {
   const goLeft = () => {
     setCurrentPage((index) => (index - 1 + numberOfSteps.length) % numberOfSteps.length)
   }
-  console.log("تقليب");
+
 
   return (
     <div className='bg-transparent absolute z-20 top-[500px] md:top-[650px] text-[#b9331a] left-[50%]   translate-x-[-50%] flex justify-between w-full md:w-[90%]  text-[50px] '>

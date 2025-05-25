@@ -4,14 +4,12 @@ import Filter from '../src/components/Filter'
 import Pagination from '../src/components/Pagination'
 import ProductsList from '../src/components/ProductsList'
 import { ContextApp } from '../src/components/ContaxtProducts'
-
 import Header from '../src/components/Header'
 import SkeletonForProducts from '../src/components/SkeletonForProducts'
 
 
 export default function Products() {
   const { loading, post, error, reload } = useContext(ContextApp);
-
   const [filteredData, setFilteredData] = useState(null)
   const listSize = 6
   const displayedData = filteredData || post || null
@@ -22,12 +20,15 @@ export default function Products() {
     return displayedData.slice(firstIndex, firstIndex + listSize)
 
   }, [CurrentPage, displayedData])
-  console.log("المنتجات");
+
+
+
+
 
   return (
     <>
       <Header />
-      <section className='flex flex-col h-auto  w-[90%] m-auto'>
+      <section className='h-auto  w-[90%] m-auto'>
         <div>
           {loading ? (
             <SkeletonForProducts />

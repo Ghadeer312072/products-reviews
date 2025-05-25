@@ -15,7 +15,7 @@ function Header() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  console.log("الراس");
+
   return (
     <header className="fixed top-0 z-50 left-0 w-full text-black bg-[#b9331a] h-[100px] flex justify-between items-center px-6 md:px-24">
       {/* الشعار */}

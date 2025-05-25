@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ContextApp } from './ContaxtProducts';
 
 function Filter({ setFilterArray }) {
-  const { loading, post, error, reload } = useContext(ContextApp);
+  const { post } = useContext(ContextApp);
   const [arrayOfCategory, setArrayOfCategory] = useState([]);
   const [openMenu, setOpenMenu] = useState(false)
   useEffect(() => {
@@ -17,7 +17,7 @@ function Filter({ setFilterArray }) {
   const btnAll = () => {
     setFilterArray(post)
   }
-  console.log("فلترة");
+
 
   return (
     <div className=' my-10 w-full'>
