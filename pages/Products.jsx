@@ -1,4 +1,4 @@
-import React, { useContext, useMemo, useState } from 'react'
+import React, { useContext, useEffect, useMemo, useState } from 'react'
 import Search from '../src/components/Search'
 import Filter from '../src/components/Filter'
 import Pagination from '../src/components/Pagination'
@@ -6,6 +6,7 @@ import ProductsList from '../src/components/ProductsList'
 import { ContextApp } from '../src/components/ContaxtProducts'
 import Header from '../src/components/Header'
 import SkeletonForProducts from '../src/components/SkeletonForProducts'
+import { useLocation } from 'react-router-dom'
 
 
 export default function Products() {
@@ -14,6 +15,10 @@ export default function Products() {
   const listSize = 6
   const displayedData = filteredData || post || null
   const [CurrentPage, setCurrentPage] = useState(0)
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   const currentItems = useMemo(() => {
     if (displayedData.length < 6) return displayedData;
     const firstIndex = (CurrentPage) * listSize

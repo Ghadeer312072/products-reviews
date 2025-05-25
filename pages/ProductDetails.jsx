@@ -2,25 +2,27 @@ import React, { useCallback, useContext, useEffect, useRef, useState } from 'rea
 import { ContextApp } from '../src/components/ContaxtProducts'
 
 import Header from '../src/components/Header'
-import Stars from '../src/components/Stars'
 import ReviewForm from '../src/components/ReviewForm'
 import ReviewsList from '../src/components/ReviewsList'
 import Product from '../src/components/Product'
 import SkeletonForDetails from '../src/components/SkeletonForDetails'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { FiArrowLeft } from 'react-icons/fi'
 
 export default function ProductDetails() {
 
   const { loading, error, reload } = useContext(ContextApp)
-
-
   const [OpenWindow, setOpenWindow] = useState(false)
   const [isAdd, setIsAdd] = useState(false)
   const overlayRef = useRef()
   const [isEdit, setIsEdit] = useState(false)
   const [userId, setUserId] = useState(null)
   const navigate = useNavigate()
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   useEffect(() => {
     const overlay = overlayRef.current;
     if (!overlay) return;
